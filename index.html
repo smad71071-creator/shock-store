@@ -3,21 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>shock1.store - أفضل اشتراكات IPTV</title>
-    <!-- استدعاء أيقونات FontAwesome -->
+    <title>shock1.store - أفخم اشتراكات IPTV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- خط تجوال من Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
     
     <style>
-        /* CSS المخصص للموقع */
         :root {
             --primary-color: #ff0055;
             --secondary-color: #7928ca;
-            --bg-dark: #0f1015;
-            --card-bg: #1a1c23;
+            --accent-gold: #ffb703;
+            --bg-dark: #090a0f;
+            --card-bg: #12141d;
             --text-color: #ffffff;
-            --text-gray: #a0a0a0;
+            --text-gray: #a0a5b5;
         }
 
         * {
@@ -32,17 +30,17 @@
             background-color: var(--bg-dark);
             color: var(--text-color);
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
-        /* القائمة العلوية */
         header {
-            background: rgba(15, 16, 21, 0.95);
-            backdrop-filter: blur(10px);
+            background: rgba(9, 10, 15, 0.95);
+            backdrop-filter: blur(12px);
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .nav-container {
@@ -51,13 +49,13 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 2rem;
+            padding: 1.2rem 2rem;
         }
 
         .logo {
-            font-size: 1.8rem;
-            font-weight: 800;
-            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            font-size: 2rem;
+            font-weight: 900;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--accent-gold));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -65,13 +63,13 @@
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 1.5rem;
+            gap: 2rem;
         }
 
         .nav-links a {
             color: var(--text-color);
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
             transition: 0.3s;
         }
 
@@ -79,23 +77,22 @@
             color: var(--primary-color);
         }
 
-        /* الهيرو / الواجهة الرئيسية */
         .hero {
-            height: 80vh;
+            height: 70vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
             padding: 0 1rem;
-            background: radial-gradient(circle at center, rgba(121, 40, 202, 0.15) 0%, rgba(15, 16, 21, 1) 70%);
+            background: radial-gradient(circle at center, rgba(121, 40, 202, 0.3) 0%, rgba(9, 10, 15, 1) 80%);
             margin-top: 60px;
         }
 
         .hero h1 {
             font-size: 3rem;
             margin-bottom: 1rem;
-            font-weight: 800;
+            font-weight: 900;
         }
 
         .hero p {
@@ -108,39 +105,21 @@
         .btn-main {
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.6rem;
             background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
             color: white;
-            padding: 0.8rem 2rem;
+            padding: 0.9rem 2.2rem;
             border-radius: 30px;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 800;
             font-size: 1.1rem;
-            box-shadow: 0 4px 15px rgba(255, 0, 85, 0.3);
-            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 20px rgba(255, 0, 85, 0.4);
+            transition: all 0.3s ease;
         }
 
         .btn-main:hover {
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(255, 0, 85, 0.5);
-        }
-
-        /* العناوين للأقسام */
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            margin: 4rem 0 2rem 0;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 4px;
-            background: var(--primary-color);
-            margin: 0.5rem auto 0 auto;
-            border-radius: 2px;
+            box-shadow: 0 8px 25px rgba(255, 0, 85, 0.6);
         }
 
         .container {
@@ -149,65 +128,197 @@
             padding: 0 1.5rem;
         }
 
-        /* شبكة الصور (الأفلام والقنوات) */
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin: 4rem 0 0.5rem 0;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-gray);
+            margin-bottom: 2.5rem;
+        }
+
+        .category-selector {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .category-banner {
+            background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .category-banner:hover, .category-banner.active {
+            border-color: var(--primary-color);
+            background: linear-gradient(135deg, rgba(255, 0, 85, 0.2) 0%, #12141d 100%);
+            transform: translateY(-5px);
+        }
+
+        .category-banner i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .category-title {
+            font-size: 1.6rem;
+            font-weight: 800;
+        }
+
+        .showcase-area {
+            background-color: var(--card-bg);
+            border-radius: 24px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            margin-bottom: 4rem;
+        }
+
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+
         .media-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
             gap: 1.5rem;
         }
 
-        .media-card {
-            background-color: var(--card-bg);
-            border-radius: 12px;
+        .movie-card {
+            background: var(--bg-dark);
+            border-radius: 14px;
             overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s, border 0.3s;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            cursor: pointer;
+            transition: all 0.3s ease;
         }
 
-        .media-card:hover {
-            transform: translateY(-8px);
+        .movie-card:hover {
+            transform: translateY(-5px);
             border-color: var(--primary-color);
+            box-shadow: 0 10px 20px rgba(255, 0, 85, 0.3);
         }
 
-        .media-card img {
+        .movie-card img {
             width: 100%;
-            height: 250px;
+            height: 270px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .movie-info { padding: 1rem; }
+
+        .movie-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .movie-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--text-gray);
+        }
+
+        .rating {
+            color: var(--accent-gold);
+            font-weight: bold;
+        }
+
+        /* Modal */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(8px);
+            z-index: 2000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem;
+        }
+
+        .modal-overlay.active { display: flex; }
+
+        .modal-content {
+            background: var(--card-bg);
+            border-radius: 20px;
+            max-width: 650px;
+            width: 100%;
+            border: 1px solid var(--primary-color);
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (min-width: 600px) {
+            .modal-content { flex-direction: row; }
+        }
+
+        .modal-img {
+            width: 100%;
+            max-height: 300px;
             object-fit: cover;
         }
 
-        .media-card h3 {
-            padding: 0.8rem;
-            font-size: 1rem;
-            text-align: center;
+        @media (min-width: 600px) {
+            .modal-img { width: 40%; max-height: 100%; }
         }
 
-        /* أسعار الاشتراكات */
+        .modal-body {
+            padding: 2rem;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 10;
+        }
+
         .pricing-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
-            margin-bottom: 4rem;
+            margin-bottom: 5rem;
         }
 
         .price-card {
             background-color: var(--card-bg);
             border-radius: 20px;
-            padding: 2.5rem 1.5rem;
+            padding: 2.5rem 1.8rem;
             text-align: center;
             border: 1px solid rgba(255, 255, 255, 0.05);
             position: relative;
-            transition: transform 0.3s, border-color 0.3s;
-        }
-
-        .price-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--secondary-color);
         }
 
         .price-card.popular {
             border: 2px solid var(--primary-color);
-            background: linear-gradient(180deg, rgba(255, 0, 85, 0.05) 0%, var(--card-bg) 100%);
+            background: linear-gradient(180deg, rgba(255, 0, 85, 0.08) 0%, var(--card-bg) 100%);
         }
 
         .badge {
@@ -217,191 +328,235 @@
             transform: translateX(-50%);
             background: var(--primary-color);
             color: white;
-            padding: 0.3rem 1rem;
+            padding: 0.4rem 1.2rem;
             border-radius: 20px;
             font-size: 0.85rem;
-            font-weight: bold;
-        }
-
-        .price-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
+            font-weight: 800;
         }
 
         .price {
-            font-size: 2.2rem;
-            font-weight: 800;
+            font-size: 2.3rem;
+            font-weight: 900;
             color: var(--primary-color);
-            margin-bottom: 1.5rem;
+            margin: 1rem 0;
         }
 
         .features {
             list-style: none;
             margin-bottom: 2rem;
             color: var(--text-gray);
+            text-align: right;
         }
 
         .features li {
             margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
-        .features li i {
-            color: #00ff88;
-            margin-left: 0.5rem;
-        }
+        .features li i { color: #00ff88; }
 
-        /* الفوتر / أسفل الصفحة */
         footer {
-            background-color: #08080a;
+            background-color: #050608;
             text-align: center;
             padding: 2rem 1rem;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
-            margin-top: 4rem;
         }
 
         .social-link {
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-            color: var(--text-color);
+            gap: 0.6rem;
+            color: white;
             text-decoration: none;
-            font-size: 1.2rem;
             margin-top: 1rem;
-            padding: 0.5rem 1.5rem;
-            border-radius: 8px;
-            background: rgba(255, 255, 255, 0.05);
-            transition: background 0.3s;
-        }
-
-        .social-link:hover {
-            background: #e1306c; /* لون انستغرام */
-        }
-
-        /* تجاوب مع الشاشات الصغيرة */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            .nav-links {
-                display: none; /* يمكن إضافة قائمة موبايل إذا لزم الأمر */
-            }
+            padding: 0.7rem 2rem;
+            border-radius: 30px;
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
 
-    <!-- القائمة العلوية -->
     <header>
         <div class="nav-container">
             <div class="logo">shock1.store</div>
             <ul class="nav-links">
                 <li><a href="#home">الرئيسية</a></li>
-                <li><a href="#movies">الأفلام والمسلسلات</a></li>
-                <li><a href="#sports">القنوات الرياضية</a></li>
+                <li><a href="#cinema">الأفلام والمسلسلات</a></li>
                 <li><a href="#pricing">الأسعار</a></li>
             </ul>
         </div>
     </header>
 
-    <!-- الواجهة الرئيسية -->
     <section id="home" class="hero">
-        <h1>عالم الترفيه بين يديك مع shock1.store</h1>
-        <p>استمتع بأقوى اشتراكات IPTV، بث مباشر بدون تقطيع، أحدث الأفلام والمسلسلات، وأقوى البطولات الرياضية وبأعلى جودة.</p>
+        <h1>أكبر مكتبة أفلام ومسلسلات IPTV</h1>
+        <p>استمتع بآلاف الأفلام والمسلسلات العالمية المحدثة يومياً بجودة 4K وبدون أي تقطيع.</p>
         <a href="https://instagram.com/shock1.store" target="_blank" class="btn-main">
-            <i class="fab fa-instagram"></i> تواصل معنا للاشتراك
+            <i class="fab fa-instagram"></i> اشترك الآن عبر الانستغرام
         </a>
     </section>
 
     <div class="container">
         
-        <!-- قسم الأفلام والمسلسلات -->
-        <section id="movies">
-            <h2 class="section-title">مكتبة الأفلام والمسلسلات</h2>
-            <div class="media-grid">
-                <div class="media-card">
-                    <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=500&q=80" alt="أفلام أكشن">
-                    <h3>أحدث أفلام الأكشن</h3>
+        <section id="cinema">
+            <h2 class="section-title">المكتبة السينمائية الشاملة</h2>
+            <p class="section-subtitle">اختر القسم واضغط على أي عمل لمشاهدة التفاصيل</p>
+
+            <div class="category-selector">
+                <div class="category-banner active" onclick="switchCategory('movies', this)">
+                    <i class="fas fa-film"></i>
+                    <div class="category-title">قسم الأفلام العالمية</div>
                 </div>
-                <div class="media-card">
-                    <img src="https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?auto=format&fit=crop&w=500&q=80" alt="مسلسلات عالمية">
-                    <h3>مسلسلات نتفلكس والمنصات</h3>
+
+                <div class="category-banner" onclick="switchCategory('series', this)">
+                    <i class="fas fa-tv"></i>
+                    <div class="category-title">قسم المسلسلات العالمية</div>
                 </div>
-                <div class="media-card">
-                    <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=500&q=80" alt="أفلام دراما">
-                    <h3>أفلام السينما العربية والعالمية</h3>
+            </div>
+
+            <div class="showcase-area">
+                
+                <!-- قسم الأفلام (الصور هنا شغالة 100% كما هي) -->
+                <div id="movies" class="tab-content active">
+                    <div class="media-grid">
+
+                        <div class="movie-card" onclick="openDetails('Inception', '2010', '8.8', 'https://image.tmdb.org/t/p/w500/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg', 'سارق محترف يستغل تقنية مشاركة الأحلام للدخول إلى عقول الآخرين وزرع أفكار جديدة في أعماق العقل الباطن.')">
+                            <img src="https://image.tmdb.org/t/p/w500/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg" onerror="this.src='https://placehold.co/500x750/12141d/ff0055?text=Inception'" alt="Inception">
+                            <div class="movie-info">
+                                <div class="movie-title">Inception</div>
+                                <div class="movie-meta"><span>2010</span><span class="rating"><i class="fas fa-star"></i> 8.8</span></div>
+                            </div>
+                        </div>
+
+                        <div class="movie-card" onclick="openDetails('Interstellar', '2014', '8.7', 'https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg', 'فريق من المستكشفين يسافر عبر ثقب دودي في الفضاء في محاولة لضمان بقاء البشرية على قيد الحياة.')">
+                            <img src="https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg" onerror="this.src='https://placehold.co/500x750/12141d/ff0055?text=Interstellar'" alt="Interstellar">
+                            <div class="movie-info">
+                                <div class="movie-title">Interstellar</div>
+                                <div class="movie-meta"><span>2014</span><span class="rating"><i class="fas fa-star"></i> 8.7</span></div>
+                            </div>
+                        </div>
+
+                        <div class="movie-card" onclick="openDetails('The Dark Knight', '2008', '9.0', 'https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg', 'عندما يظهر التهديد المعروف باسم الجوكر ويثير الفوضى في غوثام، يجب على باتمان قبول واحد من أكبر الاختبارات لمكافحة الظلم.')">
+                            <img src="https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg" onerror="this.src='https://placehold.co/500x750/12141d/ff0055?text=Dark+Knight'" alt="The Dark Knight">
+                            <div class="movie-info">
+                                <div class="movie-title">The Dark Knight</div>
+                                <div class="movie-meta"><span>2008</span><span class="rating"><i class="fas fa-star"></i> 9.0</span></div>
+                            </div>
+                        </div>
+
+                        <div class="movie-card" onclick="openDetails('Avengers: Endgame', '2019', '8.4', 'https://image.tmdb.org/t/p/w500/or06FN3Dka5tukK1e9sl16pB3iy.jpg', 'بعد الأحداث المدمرة لـ Infinity War، يتجمع أعضاء المنتقمون الباقون في محاولة أخيرة لإعادة توازن الكون.')">
+                            <img src="https://image.tmdb.org/t/p/w500/or06FN3Dka5tukK1e9sl16pB3iy.jpg" onerror="this.src='https://placehold.co/500x750/12141d/ff0055?text=Avengers'" alt="Avengers: Endgame">
+                            <div class="movie-info">
+                                <div class="movie-title">Avengers: Endgame</div>
+                                <div class="movie-meta"><span>2019</span><span class="rating"><i class="fas fa-star"></i> 8.4</span></div>
+                            </div>
+                        </div>
+
+                        <div class="movie-card" onclick="openDetails('Oppenheimer', '2023', '8.9', 'https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg', 'قصة العالم الأمريكي جي. روبرت أوبنهايمر ودوره الفعال في تطوير القنبلة الذرية خلال مشروع مانهاتن.')">
+                            <img src="https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg" onerror="this.src='https://placehold.co/500x750/12141d/ff0055?text=Oppenheimer'" alt="Oppenheimer">
+                            <div class="movie-info">
+                                <div class="movie-title">Oppenheimer</div>
+                                <div class="movie-meta"><span>2023</span><span class="rating"><i class="fas fa-star"></i> 8.9</span></div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
-                <div class="media-card">
-                    <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=500&q=80" alt="أفلام أنيميشن">
-                    <h3>أفلام ومسلسلات الأنمي والأطفال</h3>
+
+                <!-- قسم المسلسلات: باستخدام روابط حقيقية 100% مع نظام حماية بديل -->
+                <div id="series" class="tab-content">
+                    <div class="media-grid">
+
+                        <!-- 1. Breaking Bad -->
+                        <div class="movie-card" onclick="openDetails('Breaking Bad', '5 مواسم', '9.5', 'https://images.metahub.space/poster/medium/tt0903747/img.jpg', 'معلم كيمياء يتحول إلى تصنيع المواد المخدرة لتأمين مستقبل عائلته المالي بعد تشخيصه بمرض عضال.')">
+                            <img src="https://images.metahub.space/poster/medium/tt0903747/img.jpg" onerror="this.src='https://placehold.co/500x750/1e1b4b/ff0055?text=Breaking+Bad'" alt="Breaking Bad">
+                            <div class="movie-info">
+                                <div class="movie-title">Breaking Bad</div>
+                                <div class="movie-meta"><span>5 مواسم</span><span class="rating"><i class="fas fa-star"></i> 9.5</span></div>
+                            </div>
+                        </div>
+
+                        <!-- 2. Game of Thrones -->
+                        <div class="movie-card" onclick="openDetails('Game of Thrones', '8 مواسم', '9.2', 'https://images.metahub.space/poster/medium/tt0944947/img.jpg', 'تتنافس عائلات النبلاء للسيطرة على أراضي ويستروس الخيالية، بينما يعود أعداء قدامى بعد آلاف السنين.')">
+                            <img src="https://images.metahub.space/poster/medium/tt0944947/img.jpg" onerror="this.src='https://placehold.co/500x750/1e1b4b/ff0055?text=Game+of+Thrones'" alt="Game of Thrones">
+                            <div class="movie-info">
+                                <div class="movie-title">Game of Thrones</div>
+                                <div class="movie-meta"><span>8 مواسم</span><span class="rating"><i class="fas fa-star"></i> 9.2</span></div>
+                            </div>
+                        </div>
+
+                        <!-- 3. Stranger Things -->
+                        <div class="movie-card" onclick="openDetails('Stranger Things', '4 مواسم', '8.7', 'https://images.metahub.space/poster/medium/tt4574334/img.jpg', 'في بلدة صغيرة، يتعين على الأصدقاء مواجهة قوى خارقة للطبيعة وأسرار غامضة للبحث عن صديقهم المفقود.')">
+                            <img src="https://images.metahub.space/poster/medium/tt4574334/img.jpg" onerror="this.src='https://placehold.co/500x750/1e1b4b/ff0055?text=Stranger+Things'" alt="Stranger Things">
+                            <div class="movie-info">
+                                <div class="movie-title">Stranger Things</div>
+                                <div class="movie-meta"><span>4 مواسم</span><span class="rating"><i class="fas fa-star"></i> 8.7</span></div>
+                            </div>
+                        </div>
+
+                        <!-- 4. The Walking Dead -->
+                        <div class="movie-card" onclick="openDetails('The Walking Dead', '11 موسم', '8.1', 'https://images.metahub.space/poster/medium/tt1520211/img.jpg', 'مجموعة من الناجين يبحثون عن ملجأ آمن في عالم اجتاحه الموتى الأحياء (الزومبي).')">
+                            <img src="https://images.metahub.space/poster/medium/tt1520211/img.jpg" onerror="this.src='https://placehold.co/500x750/1e1b4b/ff0055?text=Walking+Dead'" alt="The Walking Dead">
+                            <div class="movie-info">
+                                <div class="movie-title">The Walking Dead</div>
+                                <div class="movie-meta"><span>11 موسم</span><span class="rating"><i class="fas fa-star"></i> 8.1</span></div>
+                            </div>
+                        </div>
+
+                        <!-- 5. Peaky Blinders -->
+                        <div class="movie-card" onclick="openDetails('Peaky Blinders', '6 مواسم', '8.8', 'https://images.metahub.space/poster/medium/tt2442560/img.jpg', 'ملحمة عائلية تدور أحداثها في إنجلترا عام 1919 وتركز على عصابة طموحة تسعى لتوسيع نفوذها.')">
+                            <img src="https://images.metahub.space/poster/medium/tt2442560/img.jpg" onerror="this.src='https://placehold.co/500x750/1e1b4b/ff0055?text=Peaky+Blinders'" alt="Peaky Blinders">
+                            <div class="movie-info">
+                                <div class="movie-title">Peaky Blinders</div>
+                                <div class="movie-meta"><span>6 مواسم</span><span class="rating"><i class="fas fa-star"></i> 8.8</span></div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
+
             </div>
         </section>
 
-        <!-- قسم القنوات الرياضية -->
-        <section id="sports">
-            <h2 class="section-title">القنوات الرياضية (beIN SPORTS وغيرها)</h2>
-            <div class="media-grid">
-                <div class="media-card">
-                    <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=500&q=80" alt="قنوات رياضية">
-                    <h3>باقة beIN SPORTS FHD / 4K</h3>
-                </div>
-                <div class="media-card">
-                    <img src="https://images.unsplash.com/photo-1518091043644-c1d4457512c6?auto=format&fit=crop&w=500&q=80" alt="الدوري الإنجليزي">
-                    <h3>متابعة دوريات أوروبا مباشرة</h3>
-                </div>
-                <div class="media-card">
-                    <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=500&q=80" alt="قنوات SSC الرياضية">
-                    <h3>قنوات SSC الرياضية</h3>
-                </div>
-                <div class="media-card">
-                    <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=500&q=80" alt="رياضات متنوعة">
-                    <h3>قنوات المصارعة والسرعة</h3>
-                </div>
-            </div>
-        </section>
-
-        <!-- قسم أسعار الاشتراكات -->
+        <!-- قسم الأسعار -->
         <section id="pricing">
-            <h2 class="section-title">باقات الاشتراكات</h2>
+            <h2 class="section-title">أسعار الاشتراكات</h2>
+            <p class="section-subtitle">اختر الباقة المناسبة لك واشترك فوراً</p>
+            
             <div class="pricing-grid">
                 
-                <!-- باقة 3 أشهر -->
                 <div class="price-card">
                     <h3>اشتراك 3 شهور</h3>
                     <div class="price">10,000 د.ع</div>
                     <ul class="features">
-                        <li><i class="fas fa-check-circle"></i> جميع القنوات الرياضية (beIN)</li>
-                        <li><i class="fas fa-check-circle"></i> مكتبة أفلام ومسلسلات ضخمة</li>
-                        <li><i class="fas fa-check-circle"></i> جودات متعددة (4K / FHD / HD)</li>
-                        <li><i class="fas fa-check-circle"></i> دعم فني طوال فترة الاشتراك</li>
+                        <li><i class="fas fa-check"></i> جميع القنوات الرياضية</li>
+                        <li><i class="fas fa-check"></i> مكتبة الأفلام والمسلسلات</li>
+                        <li><i class="fas fa-check"></i> جودة 4K وبدون تقطيع</li>
                     </ul>
                     <a href="https://instagram.com/shock1.store" target="_blank" class="btn-main">اشترك الآن</a>
                 </div>
 
-                <!-- الاشتراك السنوي (الأكثر طلباً) -->
                 <div class="price-card popular">
                     <div class="badge">الأكثر توفيراً</div>
                     <h3>اشتراك سنوي (12 شهر)</h3>
                     <div class="price">20,000 د.ع</div>
                     <ul class="features">
-                        <li><i class="fas fa-check-circle"></i> جميع القنوات الرياضية (beIN)</li>
-                        <li><i class="fas fa-check-circle"></i> تحديث يومي للأفلام والمسلسلات</li>
-                        <li><i class="fas fa-check-circle"></i> بث ثابت بدون تقطيع أثناء المباريات</li>
-                        <li><i class="fas fa-check-circle"></i> يعمل على جميع الأجهزة (شاشة/موبايل/PC)</li>
-                        <li><i class="fas fa-check-circle"></i> دعم فني VIP سريع</li>
+                        <li><i class="fas fa-check"></i> كافة القنوات والاشتراكات</li>
+                        <li><i class="fas fa-check"></i> تحديثات سينمائية يومية</li>
+                        <li><i class="fas fa-check"></i> سيرفرات VIP فائقة السرعة</li>
                     </ul>
                     <a href="https://instagram.com/shock1.store" target="_blank" class="btn-main">اشترك الآن</a>
                 </div>
 
-                <!-- باقة 6 أشهر -->
                 <div class="price-card">
                     <h3>اشتراك 6 شهور</h3>
                     <div class="price">15,000 د.ع</div>
                     <ul class="features">
-                        <li><i class="fas fa-check-circle"></i> جميع القنوات الرياضية (beIN)</li>
-                        <li><i class="fas fa-check-circle"></i> مكتبة أفلام ومسلسلات حديثة</li>
-                        <li><i class="fas fa-check-circle"></i> جودات عالية بدون تقطيع</li>
-                        <li><i class="fas fa-check-circle"></i> دعم فني متواصل</li>
+                        <li><i class="fas fa-check"></i> القنوات الرياضية والترفيهية</li>
+                        <li><i class="fas fa-check"></i> دعم فني طوال الفترة</li>
                     </ul>
                     <a href="https://instagram.com/shock1.store" target="_blank" class="btn-main">اشترك الآن</a>
                 </div>
@@ -411,14 +566,58 @@
 
     </div>
 
-    <!-- الفوتر والتواصل -->
+    <!-- النافذة المنبثقة -->
+    <div id="mediaModal" class="modal-overlay" onclick="closeDetails(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <img id="mImg" class="modal-img" src="" alt="poster" onerror="this.src='https://placehold.co/500x750/1e1b4b/ff0055?text=Poster'">
+            <div class="modal-body">
+                <button class="modal-close" onclick="closeDetailsDirect()">&times;</button>
+                <h3 id="mTitle" style="font-size: 1.5rem; margin-bottom: 0.5rem;"></h3>
+                <p style="color: var(--accent-gold); font-weight: bold; margin-bottom: 1rem;">
+                    <span id="mMeta"></span> - <i class="fas fa-star"></i> <span id="mRating"></span>
+                </p>
+                <p id="mDesc" style="color: var(--text-gray); margin-bottom: 1.5rem; font-size: 0.9rem;"></p>
+                <a href="https://instagram.com/shock1.store" target="_blank" class="btn-main" style="width: 100%; justify-content: center;">
+                    شاهد العمل كاملاً عبر السيرفر
+                </a>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <p>جميع الحقوق محفوظة &copy; 2026 - <strong>shock1.store</strong></p>
-        <p style="margin-top: 0.5rem; color: var(--text-gray);">لطلب الاشتراك أو الاستفسار تواصل معنا مباشرة عبر الانستغرام:</p>
         <a href="https://instagram.com/shock1.store" target="_blank" class="social-link">
             <i class="fab fa-instagram"></i> shock1.store
         </a>
     </footer>
 
+    <script>
+        function switchCategory(categoryId, element) {
+            document.querySelectorAll('.category-banner').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+
+            element.classList.add('active');
+            document.getElementById(categoryId).classList.add('active');
+        }
+
+        function openDetails(title, meta, rating, imgSrc, desc) {
+            document.getElementById('mTitle').innerText = title;
+            document.getElementById('mMeta').innerText = meta;
+            document.getElementById('mRating').innerText = rating;
+            document.getElementById('mImg').src = imgSrc;
+            document.getElementById('mDesc').innerText = desc;
+            document.getElementById('mediaModal').classList.add('active');
+        }
+
+        function closeDetails(e) {
+            if (e.target.id === 'mediaModal') {
+                document.getElementById('mediaModal').classList.remove('active');
+            }
+        }
+
+        function closeDetailsDirect() {
+            document.getElementById('mediaModal').classList.remove('active');
+        }
+    </script>
 </body>
 </html>
